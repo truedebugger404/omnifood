@@ -6,10 +6,109 @@
 }
 
 html{
-    color: #fff;
-    background-color: #585858;
+    color:  #585858;
+    background-color: #fff;
     font-weight: 300;
     font-family: 'Lato', 'Arial', sans-serif;
     font-size: 20px;
     text-rendering: optimizeLegibility;
 }
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto; /* same as margin: 0 auto 0 auto; but curtailed margin: t&b=0 r&l = auto */
+
+}
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(/resources/css/img/hero.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-text-box{
+    position: absolute;   
+    width: 1140px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* as we are using normalize.css there is some margin at the top of the page, cause of h1 element, so we need to set 
+it margin to 0*/ 
+h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 240%; /* twice the overall font-size in html, as we want it big for the headline*/
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+
+.btn-full:link,
+.btn-full:visited{
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:active,
+.btn:hover{
+    background-color:#cf6d17;
+}
+
+
+.btn-full:active,
+.btn-full:hover{
+    border: 1px solid #cf6d17;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:active,
+.btn-ghost:hover{
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
