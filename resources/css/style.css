@@ -1,4 +1,4 @@
-/* Initializing elements, setting box-sizing */
+/*------------- Basic setup: initializing elements, setting box-sizing-------------- */
 * {
     margin: 0;
     padding: 0;
@@ -14,12 +14,15 @@ html{
     text-rendering: optimizeLegibility;
 }
 
-.row{
-    max-width: 1140px;
-    margin: 0 auto; /* same as margin: 0 auto 0 auto; but curtailed margin: t&b=0 r&l = auto */
-
+section{
+    padding: 80px 0;
 }
 
+.box{
+    padding: 1%;
+}
+
+/*-------------HEADER-------------------------------*/
 header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(/resources/css/img/hero.jpg);
     height: 100vh;
@@ -35,18 +38,93 @@ header{
     transform: translate(-50%,-50%);
 }
 
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 50px;  
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link, 
+.main-nav li a:visited {
+    color: #fff;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    /*padding: 8px 0;*/
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:active, 
+.main-nav li a:hover {
+    border-bottom: 2px solid #e67e22;
+}
+
+/*------------------HEADINGS----------------*/
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto; /* same as margin: 0 auto 0 auto; but curtailed margin: t&b=0 r&l = auto */
+
+}
+
 /* as we are using normalize.css there is some margin at the top of the page, cause of h1 element, so we need to set 
 it margin to 0*/ 
+h1, h2, h3{
+     /* twice the overall font-size in html, as we want it big for the headline*/
+    text-transform: uppercase;
+    
+    font-weight: 300;
+}
+
+
 h1{
+    font-size: 240%;
     margin-top: 0;
     margin-bottom: 20px;
     color: #fff;
-    font-weight: 300;
-    font-size: 240%; /* twice the overall font-size in html, as we want it big for the headline*/
-    text-transform: uppercase;
+    word-spacing: 4px;
     letter-spacing: 1px;
-    word-spacing: 3px;
 }
+
+h2{
+    font-size: 180%;
+    text-align: center;
+    margin-bottom: 30px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+h2::after{
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+/*------------------BUTTONS----------------------------*/
 
 .btn:link,
 .btn:visited{
@@ -91,24 +169,27 @@ h1{
     border: 1px solid #cf6d17;
     color: #fff;
 }
+/*---------------------PARAGRAPHS---------------------*/
 
+.long-copy{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
 
+.box p{
+    font-size: 90%;
+    line-height: 145%;
 
+}
 
+/*------------------ICONS------------------------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.icon-big{
+    color: #e67e22;
+    font-size: 300%;
+    display: block;
+    margin-bottom: 10px;
+}
 
 
